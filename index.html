@@ -121,10 +121,12 @@
                 // 3. Start the mole movement interval using setInterval().
                 //    e.g., - gameTimer = setInterval(randomHole, 1000); // Move mole every second
                 // 4. Start the countdown timer using setInterval();
-                score = 0;
-                moleVisible = true;
+                let score = 0;
+                let moleVisible = true;
+                let timer  = getElementById("timer");
 
-                gameTimer = setInterval(randomHole, 1);
+                gameTimer = setInterval(randomHole, 1000);
+                countdown = setInterval(endGame, 30000);
             }
 
             // TODO: mole movement logic
